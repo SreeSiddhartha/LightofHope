@@ -4,11 +4,12 @@
 <head>
 
 <!-- Meta Tags -->
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="ngopress - Nonprofit, Crowdfunding & Charity HTML5 Template" />
-<meta name="keywords" content="charity,crowdfunding,nonprofit,orphan,Poor,funding,fundrising,ngo,children" />
-<meta name="author" content="ThemeMascot" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="light of Hope International">
+<meta name="keywords" content="charity,crowdfunding,nonprofit,orphan,Poor,funding,fundrising,ngo,children">
+<meta name="Light Of Hope International" content="TrixonTech">
+
 
 <!-- Page Title -->
 <title>Light of Hope International</title>
@@ -144,9 +145,30 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-5 col-md-5 border-1px p-20">
+          
+		  <div class="col-md-5 col-md-5 border-1px p-20">
+            <h3 class="mt-0 pt-5">Through BGI</h3> <hr>
+			
+            <p> LIGHT OF HOPE INTERNATIONAL is part of our Bridge the Gap International, Inc. family of ministries. <br><br>
+First time donors please follow the below instructions: 	<br>
+1. Click on Register Now Option <br>
+2. At Gift Designation,Please select<br> <em><strong>LIGHT OF HOPE INTERNTIONAL -VELMA - INDIA</em></strong><br><br>		<a href="https://btgii.z2systems.com/np/clients/btgii/donation.jsp?campaign=321&" target="_blank"><img border="0"  src="http://lightofhopeint.com/images/paypal.gif"  height="60">	<hr> </p>
+			  <!-- Paypal Both Onetime/Recurring Form Starts -->
+			
+			  <h3 class="mt-0 pt-5">Through Cheque</h3> <hr>
+            <h4>Address of sending the Donations to USA to India</h4> <br>
+            <h4>Light of Hope International is a NFP tax exempt 501 (c) (3) Public Charity</h4>
+            <h3>Address</h3>
+            <p>Light of Hope International <br>
+            Post Box 702558, <br>
+            Tulsa, OK 74170/2558, USA </p>
+
+
+          </div>
+		  
+		  <div class="col-md-5 col-md-offset-1 col-md-5 border-1px p-20">
             <h3 class="mt-0 pt-5">Through Paypal</h3> <hr>
-            <p> We are currently transferring our Organisation bank account and will be updated in 4weeks. So using personal paypal in mean time. Thanks for understanding and kind gesture.<br>Incase you dont prefer personal paypal please use our BGI payment method. </p>
+            <p> If you want to support Velma Elizabeth Rebbavarpu and her family personally you can use the following Paypal Link. </p>
 			  <!-- Paypal Both Onetime/Recurring Form Starts -->
 			
 			  <h3 class="mt-0 pt-5">Single Donation</h3> <hr>
@@ -162,12 +184,7 @@
 	<option value="Option 4">Option 4 $200.00 USD</option>
 	<option value="Option 5">Option 5 $500.00 USD</option>
 </select> </td></tr>
-<tr><td><input type="hidden" name="on1" value="Please Pick a Cause">Please Pick a Cause</td></tr><tr><td><select name="os1">
-	<option value="Supporting a Child">Supporting a Child </option>
-	<option value="Supporting Old">Supporting Old </option>
-	<option value="Supporting a Pastor">Supporting a Pastor </option>
-	<option value="Generous Donation">Generous Donation </option>
-</select> </td></tr>
+
 
 </table>
 <input type="hidden" name="currency_code" value="USD">
@@ -189,12 +206,7 @@
 	<option value="Option 4">Option 4 : $200.00 USD - monthly</option>
 	<option value="Option 5">Option 5 : $500.00 USD - monthly</option>
 </select> </td></tr>
-<tr><td><input type="hidden" name="on1" value="Supporting Cause">Supporting Cause</td></tr><tr><td><select name="os1">
-	<option value="Supporting Child">Supporting Child </option>
-	<option value="Supporting Old">Supporting Old </option>
-	<option value="Supporting Pastor">Supporting Pastor </option>
-	<option value="Generous Donation">Generous Donation </option>
-</select> </td></tr>
+
 </table>
 <input type="hidden" name="currency_code" value="USD">
 <input type="image" src="http://lightofhopeint.com/images/paypal.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
@@ -203,97 +215,13 @@
 
 		   
 
-            <!-- Script for Donation Form Custom Amount -->
-            <script type="text/javascript">
-              $(document).ready(function(e) {
-                var $donation_form = $("#paypal_donate_form_onetime_recurring");
-                //toggle custom amount
-                var $custom_other_amount = $donation_form.find("#custom_other_amount");
-                $custom_other_amount.hide();
-                $donation_form.find("select[name='amount']").change(function() {
-                    var $this = $(this);
-                    if ($this.val() == 'other') {
-                      $custom_other_amount.show().append('<div class="input-group"><span class="input-group-addon">$</span> <input id="input_other_amount" type="text" name="amount" class="form-control" value="100"/></div>');
-                    }
-                    else{
-                      $custom_other_amount.children( ".input-group" ).remove();
-                      $custom_other_amount.hide();
-                    }
-                });
-
-                //toggle donation_type_choice
-                var $donation_type_choice = $donation_form.find("#donation_type_choice");
-                $donation_type_choice.hide();
-                $("input[name='payment_type']").change(function() {
-                    if (this.value == 'recurring') {
-                        $donation_type_choice.show();
-                    }
-                    else {
-                        $donation_type_choice.hide();
-                    }
-                });
-
-
-                // submit form on click
-                $donation_form.on('submit', function(e){
-                        $( "#paypal_donate_form-onetime" ).submit();
-                    var item_name = $donation_form.find("select[name='item_name'] option:selected").val();
-                    var currency_code = $donation_form.find("select[name='currency_code'] option:selected").val();
-                    var amount = $donation_form.find("select[name='amount'] option:selected").val();
-                    var t3 = $donation_form.find("input[name='t3']:checked").val();
-
-                    if ( amount == 'other') {
-                      amount = $donation_form.find("#input_other_amount").val();
-                    }
-
-                    // submit proper form now
-                    if ( $("input[name='payment_type']:checked", $donation_form).val() == 'recurring' ) {
-                        var recurring_form = $('#paypal_donate_form-recurring');
-
-                        recurring_form.find("input[name='item_name']").val(item_name);
-                        recurring_form.find("input[name='currency_code']").val(currency_code);
-                        recurring_form.find("input[name='a3']").val(amount);
-                        recurring_form.find("input[name='t3']").val(t3);
-
-                        recurring_form.find("input[type='submit']").trigger('click');
-
-                    } else if ( $("input[name='payment_type']:checked", $donation_form).val() == 'one_time' ) {
-                        var onetime_form = $('#paypal_donate_form-onetime');
-
-                        onetime_form.find("input[name='item_name']").val(item_name);
-                        onetime_form.find("input[name='currency_code']").val(currency_code);
-                        onetime_form.find("input[name='amount']").val(amount);
-
-                        onetime_form.find("input[type='submit']").trigger('click');
-                    }
-                    return false;
-                });
-
-              });
-            </script>
-
-
+           
 
            
 
 
           </div>
-          <div class="col-md-5 col-md-offset-1 col-md-5 border-1px p-20">
-            <h3 class="mt-0 pt-5">Through BGI</h3> <hr>
-			
-            <p> BGI -> Bridge the Gap Innternational is an service organization which connects Donors and Charity Organizations. <br> You can use the link below and donate us through BGI online payment portal <br> <a href="https://btgii.z2systems.com/np/clients/btgii/donation.jsp?campaign=321&" target="_blank"><img border="0"  src="https://www.freepngimg.com/thumb/paypal_donate_button/1-2-paypal-donate-button-png-thumb.png"  height="100">	<hr> </p>
-			  <!-- Paypal Both Onetime/Recurring Form Starts -->
-			
-			  <h3 class="mt-0 pt-5">Through Cheque</h3> <hr>
-            <h4>Address of sending the Donations to USA to India</h4> <br>
-            <h4>Light of Hope International is a NFP tax exempt 501 (c) (3) Public Charity</h4>
-            <h3>Address</h3>
-            <p>Light of Hope International <br>
-            Post Box 702558, <br>
-            Tulsa, OK 74170/2558, USA </p>
-
-
-          </div>
+          
         </div>
       </div>
     </section>
