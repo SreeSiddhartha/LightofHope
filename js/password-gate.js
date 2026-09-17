@@ -13,7 +13,7 @@
   }
 
   var style = document.createElement("style");
-  style.textContent = "body { display: none !important; }";
+  style.textContent = "body > *:not(#lohi-password-gate) { display: none !important; }";
   document.head.appendChild(style);
 
   function showGate() {
