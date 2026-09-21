@@ -1,0 +1,44 @@
+/* Refined styling for project photo slideshows/carousels */
+.gallery-item.design .thumb {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  padding: 8px;
+}
+
+.gallery-item.design .thumb .flexslider-wrapper {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gallery-item.design .flexslider .slides img {
+  border-radius: 6px;
+  height: 320px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery-item.design .flexslider-wrapper:not([data-direction="vertical"]) .flexslider .slides img {
+  height: 380px;
+}
+
+.gallery-item.design .flex-direction-nav a {
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.gallery-item.design:hover .flex-direction-nav a {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .gallery-item.design .flexslider .slides img {
+    height: 240px;
+  }
+
+  .gallery-item.design .flexslider-wrapper:not([data-direction="vertical"]) .flexslider .slides img {
+    height: 260px;
+  }
+}
